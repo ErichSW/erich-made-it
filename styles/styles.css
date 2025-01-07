@@ -1,34 +1,47 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
     margin: 0;
-    padding: 0;
-    line-height: 1.6;
-  }
-  header {
+    text-align: left;
+}
+
+header {
     background: #333;
     color: #fff;
     padding: 1rem 0;
     text-align: center;
-  }
-  header nav ul {
+}
+
+header nav ul {
     list-style: none;
     padding: 0;
-  }
-  header nav ul li {
+}
+
+header nav ul li {
     display: inline;
     margin: 0 15px;
-  }
-  header nav ul li a {
+}
+
+header nav ul li a {
     color: #fff;
     text-decoration: none;
-  }
-  main {
+}
+
+main {
     padding: 2rem;
-  }
-  footer {
+}
+
+footer {
+    /* keep on bottom of screen */
+    position: fixed;
     text-align: center;
     background: #f4f4f4;
-    padding: 1rem 0;
     border-top: 1px solid #ddd;
-  }
-  
+    bottom: 0px;
+    margin-bottom: 0;
+    width: 100%;
+}
