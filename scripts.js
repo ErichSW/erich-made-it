@@ -5,12 +5,19 @@ function showModal(image, title, details) {
 
     const modalContent = document.createElement("div");
     modalContent.className = "modal-content";
+    modalContent.style.position = "relative"; // Ensure modalContent is the positioning context
 
     const closeButton = document.createElement("button");
-    closeButton.textContent = "Close";
-    closeButton.style.marginBottom = "10px";
+    closeButton.className = "close-button"; // Add class to the button
     closeButton.addEventListener("click", () => {
         modal.remove();
+    });
+    
+    // event listener to close modal when clicking outside the modal content
+    modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.remove();
+        }
     });
 
     const modalImage = document.createElement("img");
@@ -95,7 +102,7 @@ if (gallery) {
     console.error('Gallery element not found');
 }
 
-// rng
+// randomized animation of polaroids
 document.addEventListener('DOMContentLoaded', () => {
     const boxes = document.querySelectorAll('.box');
     boxes.forEach((box, index) => {
@@ -106,6 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
       box.style.setProperty('--random-x', `${randomX}px`);
       box.style.setProperty('--random-y', `${randomY}px`);
       box.style.setProperty('--random-rotate', `${randomRotate}deg`);
-      box.style.animation = `fadeIn 1s forwards ${index * 0.4}s`; // Apply fade-in animation with delay
+      box.style.animation = `fadeIn 1s forwards ${index * 0.3}s`; // Apply fade-in animation with delay
     });
   });
