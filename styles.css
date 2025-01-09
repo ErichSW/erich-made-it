@@ -21,26 +21,29 @@ body::before {
   z-index: -1; /* Ensure it stays behind the content */
 }
 
+.header-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 header {
-    color: #ffffff;
-    font-size: 18px;
-    padding: 1rem 0;
-    text-align: center;
+  font-family: "Mansalva", serif;
+  text-align: center;
+  background-image: url(assets/spiral2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 350px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 25px;
+  padding-top: 20px;
+  transform: rotate(-2deg);
 }
 
-header nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
+header h1 {
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 main {
@@ -58,15 +61,22 @@ main {
 
 footer {
   font-family: "Mansalva", serif;
-  font-size: 16px;
-  text-align: center;
   background-image: url(assets/spiral2.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 350px;
-  display: inline-block;
-  padding: 30px;
+  background-size: 250px;
   transform: rotate(-2deg);
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+
+}
+
+footer p {
+  margin: 0;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 /* gallery boxes (polaroids) */
