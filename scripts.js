@@ -21,8 +21,8 @@ function showModal(image, title, details) {
     });
 
     const modalImage = document.createElement("img");
+    modalImage.className = "modal-image";
     modalImage.src = image;
-    modalImage.style.width = "100%"; // Scale image to fit modal
 
     const modalTitle = document.createElement("h2");
     modalTitle.textContent = title;
@@ -41,7 +41,7 @@ function showModal(image, title, details) {
     modal.style.display = "flex";
 }
 
-// Manually list the works
+// Manually list the works, improve later
 const works = [
     { folder: 'works/008', title: 'Navy Beanie', image: 'image.jpg' },
     { folder: 'works/007', title: 'Lil baby bean', image: 'image.jpg' },
@@ -93,6 +93,7 @@ if (gallery) {
                 })
                 .catch((error) => {
                     console.error('Error fetching details:', error);
+                    showModal(`${work.folder}/${work.image}`, work.title, ''); // Show modal with blank details on error
                 });
         });
 
