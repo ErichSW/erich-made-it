@@ -36,8 +36,14 @@ function showModal(image, title, details) {
 
 // Manually list the works
 const works = [
-    { folder: 'works/First Swatch', title: 'First Swatch', image: 'image.jpg' },
-    { folder: 'works/Winter Scarf', title: 'Winter Scarf', image: 'image.jpg' }
+    { folder: 'works/008', title: 'Navy Beanie', image: 'image.jpg' },
+    { folder: 'works/007', title: 'Lil baby bean', image: 'image.jpg' },
+    { folder: 'works/006', title: 'Rustic Wool Mittens', image: 'image.jpg' },
+    { folder: 'works/005', title: 'Ocean Shawl', image: 'image.jpg' },
+    { folder: 'works/004', title: 'Twin Cable Beanies', image: 'image.jpg' },
+    { folder: 'works/003', title: 'Silver Cable Hat', image: 'image.jpg' },
+    { folder: 'works/002', title: 'Winter Scarf', image: 'image.jpg' },
+    { folder: 'works/001', title: 'First Swatch', image: 'image.jpg' }
 ];
 
 // Ensure gallery element exists
