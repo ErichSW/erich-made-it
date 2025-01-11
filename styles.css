@@ -21,6 +21,12 @@ body::before {
   z-index: -1; /* Ensure it stays behind the content */
 }
 
+main {
+  padding: 2rem;
+}
+
+/* Header */
+
 .header-container {
   display: flex;
   justify-content: center;
@@ -46,48 +52,7 @@ header h1 {
   margin-top: 0px;
 }
 
-main {
-    padding: 2rem;
-    padding-bottom: 100px;
-}
-
-/* Footer */
-
-.footer-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-footer {
-  font-family: "Mansalva", serif;
-  background-image: url(assets/spiral2.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 250px;
-  transform: rotate(-2deg);
-  padding-top: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 20px;
-
-}
-
-footer p {
-  margin: 0;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
 /* gallery boxes (polaroids) */
-
-#gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  padding: 40px;
-  justify-content: center;
-}
 
 @keyframes fadeIn {
   from {
@@ -98,6 +63,14 @@ footer p {
     opacity: 1;
     transform: translate(var(--random-x, 0), var(--random-y, 0)) rotate(var(--random-rotate, 0deg));
   }
+}
+
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px;
+  justify-content: center;
 }
 
 .box {
@@ -188,4 +161,32 @@ footer p {
 .modal-image {
   width: 100%;
   position: center;
+}
+
+/* Footer */
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+footer {
+  font-family: "Mansalva", serif;
+  background-image: url(assets/spiral2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 250px;
+  transform: rotate(-2deg);
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+
+}
+
+footer p {
+  margin: 0;
+  padding-left: 30px;
+  padding-right: 30px;
 }
