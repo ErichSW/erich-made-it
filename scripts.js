@@ -1,7 +1,7 @@
 // List of works
 const worksFolder = 'works/';
 const works = [
-    'Jerez Fingerless Gloves',
+    'Fingerless Gloves',
     'Chonky Uni Beanie',
     'Reversible Beanie',
     'Gnar Spreader',
@@ -44,6 +44,9 @@ function showModal(image, title, details) {
     const modalImage = document.createElement("img");
     modalImage.className = "modal-image";
     modalImage.src = image;
+    modalImage.addEventListener("click", () => {
+        window.open(image, '_blank');
+    });
     const modalTitle = document.createElement("h2");
     modalTitle.textContent = title;
     const modalDetails = document.createElement("p");
@@ -68,7 +71,12 @@ if (gallery) {
         // create each gallery item
         const box = document.createElement("div");
         box.className = "box";
-
+        /*
+        // add piece of tape over the box
+        const tape = document.createElement("div");
+        tape.className = "tape";
+        box.appendChild(tape);
+        */
         // add image container
         const imageContainer = document.createElement("div");
         imageContainer.className = "image-container";
@@ -79,12 +87,6 @@ if (gallery) {
         const img = document.createElement("img");
         img.src = `${worksFolder}${folder}/image.jpg`;
         img.alt = folder;
-        img.style.position = "absolute";
-        img.style.top = "0";
-        img.style.left = "0";
-        img.style.width = "100%";
-        img.style.height = "100%";
-        img.style.objectFit = "cover"; // Crop the image to fit the container
         imageContainer.appendChild(img);
         box.appendChild(imageContainer);
         
@@ -116,13 +118,13 @@ if (gallery) {
 document.addEventListener('DOMContentLoaded', () => {
     const boxes = document.querySelectorAll('.box');
     boxes.forEach((box, index) => {
-        const randomX = Math.random() * 40 - 20; // Random value between -10 and 10
-        const randomY = Math.random() * 40 - 20; // Random value between -10 and 10
+        const randomX = Math.random() * 40 - 20; // Random value between -20 and 20
+        const randomY = Math.random() * 40 - 20; // Random value between -20 and 20
         const randomRotate = Math.random() * 20 - 10; // Random value between -10deg and 10deg
     
         box.style.setProperty('--random-x', `${randomX}px`);
         box.style.setProperty('--random-y', `${randomY}px`);
         box.style.setProperty('--random-rotate', `${randomRotate}deg`);
-        box.style.animation = `fadeIn 1s forwards ${index * 0.3}s`; // Apply fade-in animation with delay
+        box.style.animation = `fadeIn 1s forwards ${index * 0.2}s`; // Apply fade-in animation with delay
     });
   });
