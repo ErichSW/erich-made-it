@@ -45,13 +45,13 @@ function showModal(image, title, details) {
     modalImage.className = "modal-image";
     modalImage.src = image;
     modalImage.addEventListener("click", () => {
-        window.open(image, '_blank');
+        window.open(image, '_blank'); // Open full res image in new tab
     });
     const modalTitle = document.createElement("h2");
     modalTitle.textContent = title;
     const modalDetails = document.createElement("p");
     modalDetails.textContent = details;
-    modalDetails.style.whiteSpace = "pre-wrap"; // Preserve line breaks
+    modalDetails.style.whiteSpace = "pre-wrap"; // Preserve line breaks from text file
 
     // assemble modal
     modalContent.appendChild(closeButton);
@@ -71,12 +71,7 @@ if (gallery) {
         // create each gallery item
         const box = document.createElement("div");
         box.className = "box";
-        /*
-        // add piece of tape over the box
-        const tape = document.createElement("div");
-        tape.className = "tape";
-        box.appendChild(tape);
-        */
+
         // add image container
         const imageContainer = document.createElement("div");
         imageContainer.className = "image-container";
@@ -84,6 +79,7 @@ if (gallery) {
         imageContainer.style.width = "100%";
         imageContainer.style.paddingTop = "100%"; // 1:1 Aspect Ratio
 
+        // get image
         const img = document.createElement("img");
         img.src = `${worksFolder}${folder}/image.jpg`;
         img.alt = folder;
@@ -97,7 +93,7 @@ if (gallery) {
         
         // event listener to show modal on click
         box.addEventListener("click", () => {
-            fetch(`${worksFolder}${folder}/details.txt`)
+            fetch(`${worksFolder}${folder}/details.txt`) // get details from text file
                 .then((response) => response.text())
                 .then((details) => {
                     showModal(`${worksFolder}${folder}/image.jpg`, folder, details);

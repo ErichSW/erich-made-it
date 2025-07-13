@@ -1,0 +1,5 @@
+Yep, this too! It's part coding exercise and part portfolio. I wanted to start from scratch, and going into this I only really knew some web language basics and Python, so I made extensive use of ChatGPT and Github copilot to help learn the rest as I went. It's been interesting to learn what goes into even the most basic functionalities of a webpage, but it's cool being able to go down into the bare code and adjust it however I like, with no real restrictions like you'd have in a website creator service. Highly recommended!
+
+Domain: Cloudflare
+Languages: HTML, CSS, Javascript
+Made in: VSCode, repositories on Github

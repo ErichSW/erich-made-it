@@ -1,0 +1,9 @@
+todo
+
+Add ability to have multiple images to modal window
+Add automatic formatting for text files
+(make database for works info? start using SQLite?)
+
+Add pricing page
+Add knitting page
+Add miscellaneous page
