@@ -1,0 +1,233 @@
+/* --- CUSTOMIZATION VARIABLES --- */
+:root {
+    --background-color: #f4f7f5;
+    --text-color: #333333;
+    --primary-color: #464646; /* Color for the dots and titles */
+    --secondary-color: #777; 
+    --line-color: #dddddd;
+    --item-background: #ffffff;
+    --sidebar-background: #e9ecef;
+    --sidebar-width: 350px;
+    --item-border-radius: 8px;
+    --item-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --special-background: #fffbe6;
+    --special-color: #ffc107;      
+}
+
+/* --- GENERAL STYLES --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    color: var(--secondary-color);
+    border-top: 1px solid var(--line-color);
+}
+
+h1 {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* --- NEW: PAGE LAYOUT --- */
+.page-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    height: 100vh; /* Full viewport height */
+    position: fixed; /* Fixed position - does not scroll */
+    top: 0;
+    left: 0;
+    background-color: var(--sidebar-background);
+    padding: 30px;
+    box-sizing: border-box; /* Include padding in the width */
+    overflow-y: auto; /* Allow sidebar to scroll if content is too long */
+}
+
+.main-content {
+    flex-grow: 1; /* Takes up the remaining space */
+    padding: 20px 40px;
+    margin-left: var(--sidebar-width); /* IMPORTANT: Creates space for the fixed sidebar */
+}
+
+/* --- SIDEBAR CONTENT --- */
+.sidebar-name {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+.sidebar-tagline {
+    margin-top: -10px;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+.sidebar-section h3 {
+    border-bottom: 2px solid var(--line-color);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+.sidebar-section p {
+    margin: 5px 0;
+    font-size: 0.95em;
+}
+.sidebar-section ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar-section li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+.sidebar-section li a:hover {
+    text-decoration: underline;
+}
+
+/* --- TIMELINE CONTAINER --- */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    padding-left: 40px;
+}
+
+/* The vertical line of the timeline */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: var(--line-color);
+    transform: translateX(-50%);
+}
+
+/* --- Normal Timeline Item --- */
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--item-background);
+    border-radius: var(--item-border-radius);
+    box-shadow: var(--item-shadow);
+}
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 28px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--primary-color); /* CSS Dot */
+    border: 6px solid var(--background-color);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* --- Special Timeline Item --- */
+.timeline-item--special {
+    background-color: var(--special-background);
+    border: 1px solid var(--special-color); /* gold border */
+}
+
+/* Replaces the default dot with a star icon */
+.timeline-item--special::after {
+    content: '★'; /* Unicode star character */
+    font-size: 24px;
+    color: var(--special-color);
+    background-color: var(--background-color); /* Match page background */
+
+    /* Reset dot properties */
+    border: none;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+
+    /* vertically center the star */
+    top: 24px;
+}
+
+/* --- LINE EVENT STYLE --- */
+/* Reset the container's appearance */
+.timeline-item--line-event {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: 40px; /* Add some space below the event */
+}
+
+/* Style the text */
+.timeline-item--line-event p {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+    color: #777;
+    margin: 0;
+}
+
+/* line before the text */
+.timeline-item--line-event p::before {
+    content: '';
+    flex-grow: 1; /* Allows the line to expand and fill space */
+    height: 1px;
+    background-color: var(--line-color);
+    margin-right: 15px; /* Space between line and text */
+}
+
+/* line after the text */
+.timeline-item--line-event p::after {
+    content: '';
+    flex-grow: 1; /* Allows the line to expand and fill space */
+    height: 1px;
+    background-color: var(--line-color);
+    margin-left: 15px; /* Space between text and line */
+}
+
+/* 5. Ensure the timeline marker (dot) is still visible */
+.timeline-item--line-event::after {
+    background-color: unset;
+    border: none;
+    top: 50%;
+    transform: translate(-50%, -50%); /* center the dot on the line */
+}
+
+.timeline-item .title { margin-top: 0; margin-bottom: 5px; font-weight: 700; color: var(--primary-color); }
+.timeline-item .company { margin: 0 0 10px 0; font-weight: 500; font-size: 1.1em; color: #555; }
+.timeline-item .time-period { margin: 0; font-size: 0.9em; color: #777; font-style: italic; }
+.timeline-item .description { margin: 15px 0 0 0; }
+
+/* --- RESPONSIVE DESIGN FOR MOBILE --- */
+@media (max-width: 850px) {
+    .page-container {
+        flex-direction: column; /* Stack sidebar on top of content */
+    }
+
+    .sidebar {
+        position: static; /* Un-fix the sidebar */
+        width: 100%;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .main-content {
+        margin-left: 0; /* Remove the offset */
+    }
+}
