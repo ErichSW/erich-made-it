@@ -81,7 +81,7 @@ if (gallery) {
 
         // get image
         const img = document.createElement("img");
-        img.src = `${worksFolder}${folder}/image.jpg`;
+        img.src = `${worksFolder}${folder}/image_s.jpg`;
         img.alt = folder;
         imageContainer.appendChild(img);
         box.appendChild(imageContainer);
