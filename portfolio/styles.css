@@ -1,0 +1,61 @@
+/* --- CUSTOMIZATION VARIABLES --- */
+:root {
+    --background-color: #f4f7f5;
+    --text-color: #333333;
+    --primary-color: #464646; /* Color for the dots and titles */
+    --secondary-color: #777; 
+    --line-color: #dddddd;
+    --item-background: #ffffff;
+    --header-background: #e9ecef;
+    --item-border-radius: 8px;
+    --item-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --special-background: #fffbe6;
+    --special-color: #ffc107;      
+}
+
+/* --- GENERAL STYLES --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    background-color: var(--header-background);
+    padding-top: 1px;
+    padding-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    color: var(--secondary-color);
+    border-top: 1px solid var(--line-color);
+}
+
+.statement {
+    margin-top: 30px;
+    margin-left: 25vw;
+    margin-right: 25vw;
+}
+
+.TOC {
+    padding-bottom: 20px;
+    margin-left: calc(50vw - 120px);
+    margin-right: calc(50vw - 120px);
+}
+
+.deliverable {
+    text-align: center;
+    position: relative;
+    margin: 30px;
+    padding: 20px;
+    background-color: var(--item-background);
+    border-radius: var(--item-border-radius);
+    box-shadow: var(--item-shadow);
+}
