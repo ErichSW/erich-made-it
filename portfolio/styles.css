@@ -9,8 +9,7 @@
     --header-background: #e9ecef;
     --item-border-radius: 8px;
     --item-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    --special-background: #fffbe6;
-    --special-color: #ffc107;      
+    --max-width: 850px;
 }
 
 /* --- GENERAL STYLES --- */
@@ -44,18 +43,39 @@ footer {
     margin-right: 25vw;
 }
 
+#intro {
+    text-align: center;
+}
+
 .TOC {
     padding-bottom: 20px;
     margin-left: calc(50vw - 120px);
     margin-right: calc(50vw - 120px);
 }
 
-.deliverable {
+.docTitle {
     text-align: center;
+}
+
+.deliverable {
     position: relative;
-    margin: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: calc(50vw - 512px);
+    margin-right: calc(50vw - 512px);
     padding: 20px;
     background-color: var(--item-background);
     border-radius: var(--item-border-radius);
     box-shadow: var(--item-shadow);
+}
+
+
+
+@media (max-width: 1084px) { /* if smaller than this amount */
+
+    .deliverable {
+    margin: 30px;
+    padding: 20px;
+    }
+
 }
