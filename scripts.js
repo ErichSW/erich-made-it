@@ -1,6 +1,7 @@
 // List of works
 const worksFolder = 'works/';
 const works = [
+    'Scandi Noodle',
     'Fingerless Gloves',
     'Chonky Uni Beanie',
     'Reversible Beanie',
