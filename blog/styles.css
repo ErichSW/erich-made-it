@@ -1,21 +1,14 @@
 header {
     font-family: 'Courier New', monospace;
     font-size: larger;
+    margin: auto;
     text-align: center;
 }
 
 main {
+    font-family: Verdana, sans-serif;
     margin: auto;
     max-width: 800px;
-}
-
-.post {
-    padding: 5px;
-    border-width: 3px;
-    border-style: solid;
-    margin: 20px;
-    border-radius: 15px;
-    box-shadow: 1px 9px 10px -2px rgba(0,0,0,0.2);
 }
 
 .box-container {
@@ -32,6 +25,43 @@ main {
     rotate: -45deg;
 }
 
+#post-button {
+    font-family: 'Courier New', monospace;
+    font-size: larger;
+    font-weight: 600;
+    color:black;
+    text-decoration: none;
+    width: max-content;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 15px;
+}
+
+#post-button:hover {
+    filter:brightness(1.1);
+}
+
+a.button {
+    padding: 1px 6px;
+    border: 1px outset buttonborder;
+    border-radius: 3px;
+    color: buttontext;
+    background-color: buttonface;
+    text-decoration: none;
+}
+
+.post, #mockup {
+    padding: 10px;
+    border-width: 3px;
+    border-style: solid;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 1px 9px 10px -2px rgba(0,0,0,0.2);
+}
+
 footer {
     font-family: 'Courier New', monospace;
     opacity: .5;
@@ -39,4 +69,36 @@ footer {
     margin: 0;
     padding-top: 30px;
     padding-bottom: 30px;
+}
+
+/* new post page */
+
+#title, #content, #username, #password {
+    font-size: large;
+    margin: 5px;
+}
+
+#title, #content {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: rgba(0, 0, 0, 0.25);
+}
+
+#content {
+    width: 97%;
+    height: 200px;
+}
+
+#title {
+    font-weight: bold;
+}
+
+#timestamp {
+    font-size: small;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: right;
+    margin: 5px;
+}
+
+#security {
+    text-align: center;
 }

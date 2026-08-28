@@ -1,4 +1,3 @@
-
 /* 
 input: nothing
 output: array with 3 integers used for rgb
@@ -26,7 +25,7 @@ function candyColors() {
 
 /* creates nested elements used as a banner */
 const containers = document.querySelectorAll('.box-container');
-let width = 10;
+let width = 9;
 
 containers.forEach(container => {
     for (let i = 0; i < width; i++) {
@@ -36,8 +35,15 @@ containers.forEach(container => {
     }
 });
 
+const coloredElements = [
+    '.post',
+    '.candy-box',
+    '#post-button',
+    '#mockup'
+];
+
 /* apply colors to posts and banner elements */
-const elements = document.querySelectorAll('.post, .candy-box');
+const elements = document.querySelectorAll(coloredElements);
 
 elements.forEach(el => {
     // Call your function to get an [r, g, b] array
