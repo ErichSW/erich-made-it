@@ -1,1 +1,0 @@
-const POSTS_DIRECTORY = path.join(REPOSITORY_ROOT, "site", "posts");
