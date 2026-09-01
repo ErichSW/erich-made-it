@@ -4,25 +4,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Erich Said It</title>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
         <link rel="icon" href="../assets/letter-e.png" type="image/x-icon">
         <script src="scripts.js" defer></script>
     </head>
     <body>
         <main>
-            <form id="post-form" action="/action_page.php">
+            <form id="post-form">
                 <div id="mockup">
-                    <input placeholder="Title" type="text" id="title"><br>
-                    <input placeholder="Content"  type="text" id="content"><br>
+                    <input placeholder="Give it a catchy title..." type="text" id="title"><br>
+                    <textarea placeholder="Say something nice..." id="content" rows="15" required></textarea><br>
                     <p id="timestamp">Timestamp here</p>
                 </div>
-                <div id="security">
-                    <input placeholder="Username" type="text" id="username"><br>
-                    <input placeholder="Password"  type="password" id="password"><br><br>
-                    <input type="submit" value="Submit">
+
+                <div id="submit-button">
+                    <button type="submit" id="publish">Put it on the internet</button>
                 </div>
             </form>
         </main>

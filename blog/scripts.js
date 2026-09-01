@@ -56,3 +56,39 @@ elements.forEach(el => {
     let d = 0.8; 
     el.style.borderColor = `rgb(${r * d}, ${g *d}, ${b * d})`;
 });
+
+
+/* create new post */
+document
+    .getElementById("post-form")
+    .addEventListener("submit", async (e) => {
+
+        e.preventDefault();
+
+        const post = {
+            title: document.getElementById("title").value,
+            content: document.getElementById("content").value,
+            timestamp: new Date().toISOString()
+        };
+
+        const response = await fetch(
+            "/api/create-post",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(post)
+            }
+        );
+
+        if (response.ok) {
+            document.getElementById("message").textContent =
+                "Post published successfully.";
+            e.target.reset();
+        }
+        else {
+            document.getElementById("message").textContent =
+                "Error publishing post.";
+        }
+    });
