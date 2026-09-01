@@ -1,0 +1,7 @@
+{
+  "name": "personal-website",
+  "private": true,
+  "scripts": {
+    "publish": "node publisher/server.js"
+  }
+}
