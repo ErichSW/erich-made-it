@@ -54,6 +54,7 @@ a.button {
 }
 
 .post, #mockup {
+    font-size: small;
     padding: 10px;
     border-width: 3px;
     border-style: solid;
